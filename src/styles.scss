@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import './dist/scss/variables.scss';
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+  font-weight: 400;
+}
+
+body{
+  background: linear-gradient(90deg, rgba(101,94,208,1) 20%, rgba(126,141,235,1) 50%, rgba(125,165,250,1) 100%);
+}
+
+ul{
+  list-style: none;
+}
+
+textarea:focus, input:focus, button{
+  outline: none;
+}
+
+button{
+  cursor: pointer;
+}
+
+//Classes
+.container{
+  width: 350px;
+  margin: 50px auto;
+}
+

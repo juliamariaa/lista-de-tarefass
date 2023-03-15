@@ -1,0 +1,18 @@
+<section [ngClass]= "{'loading': !ListaDeTarefas.length}">
+
+    <ul *ngIf="ListaDeTarefas.length">
+      <li *ngFor="let item of ListaDeTarefas; let i = index">
+        <input type="checkbox" [(ngModel)]="item.Checked">
+        <input type="text" (keyup)=" validationInput(item.Tarefa,i)"
+        [(ngModel)]="item.Tarefa" [ngClass]="{'checked': item.Checked}">
+  
+        <button  (click)="deletarItem(i)">
+          <img src="../../../../assets/icons/icon-trash (1).svg">
+        </button>
+      </li>
+    </ul>  
+</section>
+
+
+<app-input-add-itens (EnviarDados)="ReceberDados($event)"></app-input-add-itens>
+<app-button-delete-all *ngIf="ListaDeTarefas.length" (click)=deletarAll()></app-button-delete-all>
